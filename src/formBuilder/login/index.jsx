@@ -9,35 +9,16 @@ const LoginForm = () => {
       label: "Email",
       required: true,
       validators: ["Required", "Email"],
-      initialValue: "john@gmail.com",
+      initialValue: "john@gmail.com"
     })
     .add("password", "TextField", {
       type: "password",
       label: "Password",
       required: true,
-      validators: [
-        "Required",
-        ["IsGreaterThan", { length: 6 }]
-      ],
+      validators: ["Required", ["IsGreaterThan", { length: 6 }]]
     })
     .add("rememberMe", "CheckboxField", {
-      label: "Remember me",
-    })
-    .add("checkboxGroup", "CheckboxGroupField", {
-      initialValue: [],
-      options: [
-        { label: 'Apple', value: 'Apple' },
-        { label: 'Pear', value: 'Pear' },
-        { label: 'Orange', value: 'Orange' }
-      ]
-    })
-    .add("select", "SelectField", {
-      placeholder: "Select ...",
-      options: [
-        { label: 'Apple', value: 'Apple' },
-        { label: 'Pear', value: 'Pear' },
-        { label: 'Orange', value: 'Orange' }
-      ]
+      label: "Remember me"
     })
     .add("submit", "Button", {
       type: "submit",
